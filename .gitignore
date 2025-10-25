@@ -1,0 +1,33 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains IDE
+.idea/
+.vs/
+*.iml
+*.iws
+
+# macOS system files
+.DS_Store
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+secrets.json
+
+# NuGet packages (if locally restored)
+*.nupkg
+*.snupkg
+packages/
+
+# Publish output
+**/publish/

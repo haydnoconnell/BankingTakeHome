@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingTakeHome.Domain", "BankingTakeHome.Domain\BankingTakeHome.Domain.csproj", "{9FB6FE02-9558-4FAA-AA72-8B48D43BF9DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingTakeHome.Application", "BankingTakeHome.Application\BankingTakeHome.Application.csproj", "{EDF6F087-1CF4-4A14-9E2C-C09EF47243EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingTakeHome.Infrastructure", "BankingTakeHome.Infrastructure\BankingTakeHome.Infrastructure.csproj", "{9689D813-E3B6-43AE-A264-5340DBCC8556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingTakeHome.Tests", "BankingTakeHome.Tests\BankingTakeHome.Tests.csproj", "{94BC8DBD-A2A6-447D-AA0A-79D341EFF28E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FB6FE02-9558-4FAA-AA72-8B48D43BF9DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB6FE02-9558-4FAA-AA72-8B48D43BF9DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB6FE02-9558-4FAA-AA72-8B48D43BF9DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB6FE02-9558-4FAA-AA72-8B48D43BF9DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF6F087-1CF4-4A14-9E2C-C09EF47243EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF6F087-1CF4-4A14-9E2C-C09EF47243EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF6F087-1CF4-4A14-9E2C-C09EF47243EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF6F087-1CF4-4A14-9E2C-C09EF47243EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9689D813-E3B6-43AE-A264-5340DBCC8556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9689D813-E3B6-43AE-A264-5340DBCC8556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9689D813-E3B6-43AE-A264-5340DBCC8556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9689D813-E3B6-43AE-A264-5340DBCC8556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94BC8DBD-A2A6-447D-AA0A-79D341EFF28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94BC8DBD-A2A6-447D-AA0A-79D341EFF28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94BC8DBD-A2A6-447D-AA0A-79D341EFF28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94BC8DBD-A2A6-447D-AA0A-79D341EFF28E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
