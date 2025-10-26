@@ -31,9 +31,4 @@ public class InMemoryAccountRepository : IAccountRepository
         }
         return Task.FromResult(account);
     }
-
-    public Task<bool> ExistsAsync(string id)
-    {
-        return Task.FromResult(_accounts.ContainsKey(id));
-    }
 }

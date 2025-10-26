@@ -1,6 +1,4 @@
-﻿using BankingTakeHome.Domain;
-
-namespace BankingTakeHome.Application;
+﻿namespace BankingTakeHome.Application;
 
 public interface IAccountService
 {
@@ -8,5 +6,5 @@ public interface IAccountService
     Task DepositAsync(string accountId, decimal amount);
     Task WithdrawAsync(string accountId, decimal amount);
     Task TransferAsync(string fromAccountId, string toAccountId, decimal amount);
-    
+    Task<decimal> GetBalanceAsync(string accountId);
 }
