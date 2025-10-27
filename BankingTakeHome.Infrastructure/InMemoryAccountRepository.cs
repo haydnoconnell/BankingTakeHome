@@ -13,11 +13,13 @@ public class InMemoryAccountRepository : IAccountRepository
             throw new InvalidOperationException($"Account {account.Id} already exists");
         }
         
+        //Account is stored in memory for testing
         _accounts[account.Id] = account;
+        
         return Task.FromResult(account);
     }
     
-    //Doesn't update as it is stored in InMemory
+    //Account is already stored in memory 
     public Task UpdateAsync(Account account)
     {
         return Task.CompletedTask; 
@@ -29,6 +31,7 @@ public class InMemoryAccountRepository : IAccountRepository
         {
             throw new InvalidOperationException($"Account {id} not found");
         }
+        
         return Task.FromResult(account);
     }
 }

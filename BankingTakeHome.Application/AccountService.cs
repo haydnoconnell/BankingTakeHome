@@ -11,8 +11,11 @@ public class AccountService(IAccountRepository repository) : IAccountService
     public async Task<string> CreateAccountAsync(string ownerName, decimal initialDeposit)
     {
         var accountId = NewId();
+        
         var account = new Account(accountId, ownerName, initialDeposit);
+        
         await repository.CreateAsync(account);
+        
         return accountId;
     }
 
@@ -34,11 +37,6 @@ public class AccountService(IAccountRepository repository) : IAccountService
     {
         var account = await repository.GetAsync(accountId);
         
-        if(account is null)
-        {
-            throw new InvalidOperationException($"Account with id {accountId} not found");
-        }
-        
         account.Withdraw(amount);
         
         await repository.UpdateAsync(account);
@@ -52,18 +50,10 @@ public class AccountService(IAccountRepository repository) : IAccountService
         }
 
         var fromAccount = await repository.GetAsync(fromAccountId);
-        if (fromAccount is null)
-        {
-            throw new InvalidOperationException($"Unable to complete transfer. Sender Account with id {fromAccountId} not found");
-        }
-
         var toAccount = await repository.GetAsync(toAccountId);
-        if (toAccount is null)
-        {
-            throw new InvalidOperationException($"Unable to complete transfer. Receiver Account with id {toAccountId} not found");
-        }
-
-        fromAccount.Transfer(fromAccount, toAccount, amount);
+        
+        fromAccount.Withdraw(amount);
+        toAccount.Deposit(amount);
 
         await repository.UpdateAsync(fromAccount);
         await repository.UpdateAsync(toAccount);
@@ -72,11 +62,7 @@ public class AccountService(IAccountRepository repository) : IAccountService
     public async Task<decimal> GetBalanceAsync(string accountId)
     {
         var account = await repository.GetAsync(accountId);
-        if (account is null)
-        {
-            throw new InvalidOperationException($"Account with id {accountId} not found");
-        }
-
+        
         return account.Balance;
     }
 }
